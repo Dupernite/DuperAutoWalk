@@ -16,13 +16,13 @@ public class keyInputHandler {
 
     public static void registerKeyInputs() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            KeyBinding forwardKey = MinecraftClient.getInstance().options.forwardKey;
             if (autoWalk.wasPressed()) {
                 isAutoWalking = !isAutoWalking;
             }
             if (isAutoWalking) {
                 if (client.player != null) {
-                    client.player.setSprinting(true);
-                    client.player.setVelocity(client.player.getVelocity().x, 0, client.player.getVelocity().z);
+                    KeyBinding.setKeyPressed(InputUtil.fromTranslationKey(forwardKey.getBoundKeyTranslationKey()), true);
                 }
             }
         });
