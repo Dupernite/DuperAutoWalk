@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "duperautowalk",
+  "version": "${version}",
+  "name": "Duper's AutoWalk",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/arthu/DuperAutoWalk"
+  },
+  "license": "MIT",
+  "icon": "assets/duperautowalk/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.dupernite.duperautowalk.client.DuperAutoWalkClient"
+    ],
+    "main": [
+      "com.dupernite.duperautowalk.DuperAutoWalk"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
