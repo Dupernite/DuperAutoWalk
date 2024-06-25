@@ -10,10 +10,11 @@ This is a simple mod that adds a keybind, allowing the player to move forward wi
 ## Developer
 
 - [@Dupernite](https://www.github.com/dupernite)
-- Inspired by [AutoWalk by @CIOCOLATA47](https://modrinth.com/mod/autowalk)
+- Inspired by [AutoWalk](https://modrinth.com/mod/autowalk) by [@CIOCOLATA47](https://modrinth.com/user/CIOCOLATA47)
 
 
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
+![Auto Walk](https://i.imgur.com/BaV9xl8.gif)
