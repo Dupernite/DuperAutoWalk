@@ -12,16 +12,25 @@
   "icon": "assets/duperautowalk/icon.png",
   "environment": "*",
   "entrypoints": {
-    "client": [
-      "com.dupernite.duperautowalk.client.DuperAutoWalkClient"
-    ],
-    "main": [
-      "com.dupernite.duperautowalk.DuperAutoWalk"
-    ]
+    "client": [ "com.dupernite.duperautowalk.client.DuperAutoWalkClient" ],
+    "main": [ "com.dupernite.duperautowalk.DuperAutoWalk" ],
+    "modmenu": [ "com.dupernite.duperautowalk.compat.ModMenuAPI" ]
   },
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
     "minecraft": "${minecraft_version}"
+  },
+  "custom": {
+    "modmenu": {
+      "parent": {
+        "id": "duperautowalk",
+        "name": "Duper's AutoWalk",
+        "description": "A simple mod that allows you to walk without holding the forward key.",
+        "icon": "assets/duperautowalk/icon.png"
+      },
+      "update_checker": true,
+      "environment": "client"
+    }
   }
 }
