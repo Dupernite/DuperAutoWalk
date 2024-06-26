@@ -1,6 +1,7 @@
 {
   "key.category": "Utilidades de Duper",
   "key.duperautowalk.autowalk": "Marcha Automática",
+  "key.duperautowalk.key.duperautowalk.config": "Configuración de Caminata Automática",
 
   "chat.duperautowalk.autowalk.enabled": "La marcha automática ahora está activada.",
   "chat.duperautowalk.autowalk.disabled": "La marcha automática ahora está desactivada.",

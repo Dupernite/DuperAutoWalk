@@ -49,32 +49,6 @@ public class AutoWalkOverlay implements HudRenderCallback {
                     x = width - 16;
                     y = 1;
                 }
-                /*switch (YACLconfig.position) {
-                    case TOP_LEFT -> {
-                        x = 0;
-                        y = 1;
-                    }
-                    case TOP_RIGHT -> {
-                        x = width - 16;
-                        y = 1;
-                    }
-                    case MIDDLE_LEFT -> {
-                        x = 0;
-                        y = height / 2 - 8;
-                    }
-                    case MIDDLE_RIGHT -> {
-                        x = width - 16;
-                        y = height / 2 - 8;
-                    }
-                    case BOTTOM_LEFT -> {
-                        x = 0;
-                        y = height - 15;
-                    }
-                    case BOTTOM_RIGHT -> {
-                        x = width - 16;
-                        y = height - 15;
-                    }
-                }*/
                 drawContext.drawTexture(TEXTURE, x, y, 0,0,16,16,16,16);
             }
         }
