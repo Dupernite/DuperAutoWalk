@@ -21,7 +21,8 @@ repositories {
         url = "https://maven.terraformersmc.com/"
     }
     maven {
-        url = "https://api.modrinth.com/maven"
+        name 'Xander Maven'
+        url 'https://maven.isxander.dev/releases'
     }
 }
 
@@ -36,7 +37,7 @@ dependencies {
 
     modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
 
-    modImplementation("maven.modrinth:midnightlib:${project.midnightlib_version}")
+    modImplementation("dev.isxander:yet-another-config-lib:${project.yacl_version}")
 }
 
 processResources {

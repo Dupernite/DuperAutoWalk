@@ -1,0 +1,25 @@
+{
+  "key.category": "Utilidades de Duper",
+  "key.duperautowalk.autowalk": "Caminata Automática",
+
+  "chat.duperautowalk.autowalk.enabled": "La caminata automática ahora está activada.",
+  "chat.duperautowalk.autowalk.disabled": "La caminata automática ahora está desactivada.",
+
+  "category.duperautowalk.general": "General",
+  "config.duperautowalk.title": "Caminata Automática",
+
+  "option.duperautowalk.feedback": "¿Dónde debería mostrarse el feedback?",
+  "option.duperautowalk.feedback.description": "Seleccione dónde se debe mostrar el feedback al activar o desactivar la Caminata Automática.",
+  "duperautowalk.feedback.none": "Ninguno",
+  "duperautowalk.feedback.chat": "Chat",
+  "duperautowalk.feedback.hud": "HUD",
+
+  "option.duperautowalk.position": "Posición del icono de Caminata Automática",
+  "option.duperautowalk.enabled.position": "Si está activado, el icono de Caminata Automática se mostrará en la posición seleccionada.",
+  "duperautowalk.position.top_left": "Arriba Izquierda",
+  "duperautowalk.position.top_right": "Arriba Derecha",
+  "duperautowalk.position.middle_left": "Medio Izquierda",
+  "duperautowalk.position.middle_right": "Medio Derecha",
+  "duperautowalk.position.bottom_left": "Abajo Izquierda",
+  "duperautowalk.position.bottom_right": "Abajo Derecha"
+}

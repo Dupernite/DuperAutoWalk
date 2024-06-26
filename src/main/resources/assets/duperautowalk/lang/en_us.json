@@ -2,13 +2,24 @@
   "key.category": "Duper's Utils",
   "key.duperautowalk.autowalk": "Auto Walk",
 
-  "duperautowalk.midnightconfig.title": "Auto Walk",
-  "duperautowalk.midnightconfig.positionEnum":"Position of the Auto Walk Icon",
-  "duperautowalk.midnightconfig.isIconEnabled":"Should the Auto Walk Icon be displayed?",
-  "duperautowalk.midnightconfig.enum.PositionEnum.TOP_LEFT":"Top Left",
-  "duperautowalk.midnightconfig.enum.PositionEnum.TOP_RIGHT":"Top Right",
-  "duperautowalk.midnightconfig.enum.PositionEnum.MIDDLE_LEFT":"Middle Left",
-  "duperautowalk.midnightconfig.enum.PositionEnum.MIDDLE_RIGHT":"Middle Right",
-  "duperautowalk.midnightconfig.enum.PositionEnum.BOTTOM_LEFT":"Bottom Left",
-  "duperautowalk.midnightconfig.enum.PositionEnum.BOTTOM_RIGHT":"Bottom Right"
+  "chat.duperautowalk.autowalk.enabled": "Auto Walking is now enabled.",
+  "chat.duperautowalk.autowalk.disabled": "Auto Walking is now disabled.",
+
+  "category.duperautowalk.general": "General",
+  "config.duperautowalk.title": "Auto Walk",
+
+  "option.duperautowalk.feedback": "Where should the feedback be displayed?",
+  "option.duperautowalk.feedback.description": "Choose where the feedback should be displayed when toggling Auto Walk.",
+  "duperautowalk.feedback.none": "None",
+  "duperautowalk.feedback.chat": "Chat",
+  "duperautowalk.feedback.hud": "HUD",
+
+  "option.duperautowalk.position": "Position of the Auto Walk Icon",
+  "option.duperautowalk.enabled.position": "If enabled, the Auto Walk Icon will be displayed at the selected position.",
+  "duperautowalk.position.top_left": "Top Left",
+  "duperautowalk.position.top_right": "Top Right",
+  "duperautowalk.position.middle_left": "Middle Left",
+  "duperautowalk.position.middle_right": "Middle Right",
+  "duperautowalk.position.bottom_left": "Bottom Left",
+  "duperautowalk.position.bottom_right": "Bottom Right"
 }

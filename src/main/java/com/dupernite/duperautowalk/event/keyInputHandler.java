@@ -1,17 +1,15 @@
 package com.dupernite.duperautowalk.event;
 
 
+import com.dupernite.duperautowalk.compat.YACLconfig;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.screen.ingame.MinecartCommandBlockScreen;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
-import net.minecraft.entity.player.PlayerAbilities;
-import net.minecraft.network.packet.c2s.play.PlayerInputC2SPacket;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import org.lwjgl.glfw.GLFW;
-import net.minecraft.entity.player.PlayerEntity;
-
 public class keyInputHandler {
     public static final String CATEGORY = "key.category";
     public static final String KEY_AUTO_WALK = "key.duperautowalk.autowalk";
@@ -24,12 +22,20 @@ public class keyInputHandler {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (autoWalkKey.wasPressed()) {
                 isOn = !isOn;
+
+                if (client.player != null && YACLconfig.getFeedback() == YACLconfig.feedbackEnum.CHAT) {
+                    if(isOn){
+                        client.player.sendMessage(Text.translatable("chat.duperautowalk.autowalk.enabled").formatted(Formatting.GREEN), false);
+                    } else {
+                        client.player.sendMessage(Text.translatable("chat.duperautowalk.autowalk.disabled").formatted(Formatting.RED), false);
+                    }
+                }
             }
 
             if (isOn) {
                 MinecraftClient.getInstance().options.forwardKey.setPressed(true);
                 ForwardKeyState = true;
-            } else if (!isOn && ForwardKeyState) {
+            } else if (ForwardKeyState) {
                 MinecraftClient.getInstance().options.forwardKey.setPressed(false);
                 ForwardKeyState = false;
             }

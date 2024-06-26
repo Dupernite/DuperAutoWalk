@@ -1,7 +1,7 @@
 package com.dupernite.duperautowalk.client;
 
 import com.dupernite.duperautowalk.DuperAutoWalk;
-import com.dupernite.duperautowalk.compat.MidnightLibAPI;
+import com.dupernite.duperautowalk.compat.YACLconfig;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
@@ -29,15 +29,34 @@ public class AutoWalkOverlay implements HudRenderCallback {
             RenderSystem.setShaderColor(1, 1, 1, 1);
 
             RenderSystem.setShaderTexture(0, TEXTURE);
-            if(keyInputHandler.isOn && MidnightLibAPI.isIconEnabled){
-                switch (MidnightLibAPI.positionEnum) {
+            if(keyInputHandler.isOn && YACLconfig.getFeedback() == YACLconfig.feedbackEnum.HUD){
+                if(YACLconfig.getPosition() == YACLconfig.positionEnum.BOTTOM_LEFT){
+                    x = 0;
+                    y = height - 17;
+                } else if(YACLconfig.getPosition() == YACLconfig.positionEnum.BOTTOM_RIGHT){
+                    x = width - 16;
+                    y = height - 17;
+                } else if(YACLconfig.getPosition() == YACLconfig.positionEnum.MIDDLE_LEFT){
+                    x = 0;
+                    y = height / 2 - 8;
+                } else if(YACLconfig.getPosition() == YACLconfig.positionEnum.MIDDLE_RIGHT){
+                    x = width - 16;
+                    y = height / 2 - 8;
+                } else if(YACLconfig.getPosition() == YACLconfig.positionEnum.TOP_LEFT){
+                    x = 0;
+                    y = 1;
+                } else if(YACLconfig.getPosition() == YACLconfig.positionEnum.TOP_RIGHT){
+                    x = width - 16;
+                    y = 1;
+                }
+                /*switch (YACLconfig.position) {
                     case TOP_LEFT -> {
                         x = 0;
-                        y = 0;
+                        y = 1;
                     }
                     case TOP_RIGHT -> {
                         x = width - 16;
-                        y = 0;
+                        y = 1;
                     }
                     case MIDDLE_LEFT -> {
                         x = 0;
@@ -49,13 +68,13 @@ public class AutoWalkOverlay implements HudRenderCallback {
                     }
                     case BOTTOM_LEFT -> {
                         x = 0;
-                        y = height - 16;
+                        y = height - 15;
                     }
                     case BOTTOM_RIGHT -> {
                         x = width - 16;
-                        y = height - 16;
+                        y = height - 15;
                     }
-                }
+                }*/
                 drawContext.drawTexture(TEXTURE, x, y, 0,0,16,16,16,16);
             }
         }
