@@ -33,23 +33,22 @@ public class AutoWalkOverlay implements HudRenderCallback {
             RenderSystem.setShaderTexture(0, TEXTURE);
             if(keyInputHandler.isOn && YACLconfig.getFeedback() == YACLconfig.feedbackEnum.HUD){
                 switch (YACLconfig.getPosition()) {
-                    case BOTTOM_LEFT-> {
-                        y = height - 17;
-                    }
+                    case BOTTOM_LEFT-> y = height - 17;
+
                     case BOTTOM_RIGHT -> {
                         x = width - 16;
                         y = height - 17;
                     }
-                    case MIDDLE_LEFT -> {
-                        y = height / 2 - 8;
-                    }
+
+                    case MIDDLE_LEFT -> y = height / 2 - 8;
+
                     case MIDDLE_RIGHT -> {
                         x = width - 16;
                         y = height / 2 - 8;
                     }
-                    case TOP_LEFT -> {
-                        y = 1;
-                    }
+
+                    case TOP_LEFT -> y = 1;
+
                     case TOP_RIGHT -> {
                         x = width - 16;
                         y = 1;
