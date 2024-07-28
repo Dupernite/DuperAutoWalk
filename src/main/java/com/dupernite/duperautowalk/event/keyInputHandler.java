@@ -38,6 +38,13 @@ public class keyInputHandler {
                 }
             }
 
+            if (MinecraftClient.getInstance().options.backKey.wasPressed()){
+                isOn = false;
+                if (client.player != null && YACLconfig.getFeedback() == YACLconfig.feedbackEnum.CHAT && ForwardKeyState) {
+                    client.player.sendMessage(Text.translatable("chat.duperautowalk.autowalk.disabled").formatted(Formatting.RED), false);
+                }
+            }
+
             if (isOn) {
                 MinecraftClient.getInstance().options.forwardKey.setPressed(true);
                 ForwardKeyState = true;

@@ -20,7 +20,7 @@
     "fabricloader": ">=0.15.11",
     "fabric": "*",
     "yet_another_config_lib_v3": "*",
-    "minecraft": "1.21"
+    "minecraft": "*"
   },
   "custom": {
     "modmenu": {
