@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.render.GameRenderer;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.util.Identifier;
 import com.dupernite.duperautowalk.event.keyInputHandler;
@@ -24,10 +25,11 @@ public class AutoWalkOverlay implements HudRenderCallback {
             int height = client.getWindow().getScaledHeight();
             int x = 0;
             int y = 0;
-            int size_x = 0;
-            int size_y = 0;
+            int size_x = 16;
+            int size_y = 16;
 
-            RenderSystem.setShader(GameRenderer::getPositionTexProgram);
+            //? if <1.21.2
+            /*RenderSystem.setShader(GameRenderer::getPositionTexProgram);*/
             RenderSystem.setShaderColor(1, 1, 1, 1);
 
             RenderSystem.setShaderTexture(0, TEXTURE);
@@ -82,7 +84,10 @@ public class AutoWalkOverlay implements HudRenderCallback {
                     }
                 }
 
-                drawContext.drawTexture(TEXTURE, x, y, 0,0,size_x,size_y,size_x,size_y);
+                //? if <1.21.2
+                /*drawContext.drawTexture(TEXTURE, x, y, 0,0,16,16,size_x,size_y);*/
+                //? if >=1.21.2
+                drawContext.drawTexture(RenderLayer::getGuiTexturedOverlay,TEXTURE, x, y, 0, 0, size_x, size_y, size_x, size_y);
             }
         }
     }
